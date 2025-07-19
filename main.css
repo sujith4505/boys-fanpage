@@ -1,0 +1,181 @@
+body {
+    margin: 0;
+    background: #D96846;
+    font-family: 'Arial Black', Arial, sans-serif;
+    color: #333;
+}
+header {
+    background-color: #444;
+    padding: 24px 0;
+    text-align: center;
+    color: #cccccc;
+    font-size: 2.5em;
+    letter-spacing: 4px;
+    font-weight: bold;
+    text-shadow: 0 0 10px #66666680;
+}
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background: transparent;
+    margin-top: 16px;
+}
+.tab-list {
+    display: flex;
+    border-radius: 12px;
+    box-shadow: none;
+    overflow: visible;
+    background: transparent;
+}
+.tab-list li {
+    list-style: none;
+    margin: 0 12px;
+}
+.tab-list a {
+    display: block;
+    padding: 12px 26px;
+    color: #222;
+    background: #bbbbbb;
+    font-size: 1.15em;
+    text-decoration: none;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    font-weight: 700;
+    margin: 0 12px;
+    box-shadow: 0 2px 5px #00000020;
+    transition: background 0.3s, color 0.3s, border 0.3s;
+}
+.tab-list a:hover,
+.tab-list a:focus {
+    background: #888888;
+    color: #D96846;
+    border-color: #D96846;
+    outline: 2px solid #D96846;
+}
+.tab-list a.active,
+.tab-list a[aria-current="page"] {
+    background: #D96846;
+    color: #fff;
+    border-color: #B5593D;
+    box-shadow: 0 4px 9px #B5593Dcc;
+}
+.tab-container {
+    background: #a8a8a8;
+    border-radius: 0 0 12px 12px;
+    max-width: 700px;
+    margin: 20px auto 36px auto;
+    padding: 32px 28px 20px 28px;
+    font-size: 1.18em;
+    color: #222;
+    box-shadow: 0 5px 15px -4px #0002;
+}
+main {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 0 18px 40px 18px;
+    color: #222;
+}
+.card-list {
+    padding: 0;
+}
+.card-list > li {
+    background: #b2b2b2;
+    margin: 32px 0 0 0;
+    border-radius: 9px;
+    box-shadow: 0 2px 16px -4px #0002;
+    padding: 24px;
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+}
+.card-list img {
+    border-radius: 7px;
+    box-shadow: 0 1px 8px #3333;
+    background: #999999;
+}
+.card-list h3 {
+    margin: 0 0 12px 0;
+    font-size: 1.3em;
+    color: #D96846;
+}
+.card-list strong {
+    color: #222;
+}
+footer {
+    background: #444;
+    color: #cccccc;
+    text-align: center;
+    padding: 18px 0 10px;
+    font-size: 1em;
+    margin-top: 42px;
+    letter-spacing: 2px;
+    border-radius: 10px 10px 0 0;
+}
+/* Responsive Navigation Tabs */
+@media (max-width: 700px) {
+    .tab-list {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .tab-list li {
+        margin: 8px 4px;
+    }
+    .tab-list a {
+        padding: 11px 12px;
+        font-size: 1em;
+    }
+    .tab-container {
+        max-width: 97vw;
+        padding: 20px 8vw 12px 8vw;
+        font-size: 1em;
+    }
+    main {
+        max-width: 100vw;
+        padding: 0 5vw 40px 5vw;
+    }
+    .card-list > li {
+        flex-direction: column;
+        gap: 18px;
+        padding: 16px;
+        margin: 22px 0 0 0;
+    }
+    .card-list img {
+        width: 90vw;
+        max-width: 330px;
+        height: auto;
+        align-self: center;
+    }
+}
+
+/* Extra Small Screens */
+@media (max-width: 420px) {
+    header {
+        font-size: 1.3em;
+        padding: 10px 0;
+    }
+    .tab-list a, .tab-list li {
+        font-size: 0.96em;
+        padding: 8px 2vw;
+        margin: 4px 2px;
+    }
+    .tab-container, main {
+        padding-left: 2vw;
+        padding-right: 2vw;
+    }
+}
+@media (max-width: 700px) {
+    .tab-list { flex-wrap: wrap; }
+    .tab-list li { margin: 8px 4px; }
+    .tab-list a { padding: 11px 12px; font-size: 1em; }
+    .tab-container { max-width: 97vw; padding: 20px 8vw 12px 8vw; font-size: 1em; }
+    main { max-width: 100vw; padding: 0 5vw 40px 5vw; }
+    .card-list > li { flex-direction: column; gap: 18px; padding: 16px; margin: 22px 0 0 0;}
+    .card-list img { width: 90vw; max-width: 330px; height: auto; align-self: center; }
+}
+@media (max-width: 420px) {
+    header { font-size: 1.3em; padding: 10px 0; }
+    .tab-list a, .tab-list li { font-size: 0.96em; padding: 8px 2vw; margin: 4px 2px; }
+    .tab-container, main { padding-left: 2vw; padding-right: 2vw; }
+}
+img { max-width: 100%; height: auto; display: block; }
